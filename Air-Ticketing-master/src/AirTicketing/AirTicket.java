@@ -448,7 +448,7 @@ public class AirTicket extends javax.swing.JFrame {
 
         fromComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Nepal", "China", "India", "Spain", "Australia" }));
         jPanel3.add(fromComboBox);
-        fromComboBox.setBounds(135, 300, 65, 20);
+        fromComboBox.setBounds(135, 300, 68, 20);
 
         tolbl.setText("To");
         jPanel3.add(tolbl);
@@ -456,7 +456,7 @@ public class AirTicket extends javax.swing.JFrame {
 
         toComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Nepal", "China", "India", "Spain", "Australia" }));
         jPanel3.add(toComboBox);
-        toComboBox.setBounds(240, 300, 65, 20);
+        toComboBox.setBounds(240, 300, 68, 20);
 
         seatlbl.setText("Seat");
         jPanel3.add(seatlbl);
@@ -466,43 +466,43 @@ public class AirTicket extends javax.swing.JFrame {
 
         availableSeatBtn.setText("Check available seat");
         jPanel3.add(availableSeatBtn);
-        availableSeatBtn.setBounds(90, 380, 180, 21);
+        availableSeatBtn.setBounds(90, 380, 180, 23);
 
         flightlbl.setText("Flight detail");
         jPanel3.add(flightlbl);
-        flightlbl.setBounds(400, 180, 70, 13);
+        flightlbl.setBounds(400, 180, 70, 14);
 
         tripBtnGroup.add(onewayRadioBtn);
         onewayRadioBtn.setText("One way");
         jPanel3.add(onewayRadioBtn);
-        onewayRadioBtn.setBounds(500, 180, 90, 21);
+        onewayRadioBtn.setBounds(500, 180, 90, 23);
 
         tripBtnGroup.add(wholeTripRadioBtn);
         wholeTripRadioBtn.setText("Whole Trip");
         jPanel3.add(wholeTripRadioBtn);
-        wholeTripRadioBtn.setBounds(590, 180, 90, 21);
+        wholeTripRadioBtn.setBounds(590, 180, 90, 23);
 
         classlbl.setText("Class");
         jPanel3.add(classlbl);
-        classlbl.setBounds(400, 220, 50, 13);
+        classlbl.setBounds(400, 220, 50, 14);
 
         classBtnGroup.add(firstClassRadioBtn);
         firstClassRadioBtn.setText("First Class");
         jPanel3.add(firstClassRadioBtn);
-        firstClassRadioBtn.setBounds(500, 220, 90, 21);
+        firstClassRadioBtn.setBounds(500, 220, 90, 23);
 
         classBtnGroup.add(economyRadioBtn);
         economyRadioBtn.setText("Economy");
         jPanel3.add(economyRadioBtn);
-        economyRadioBtn.setBounds(590, 220, 100, 21);
+        economyRadioBtn.setBounds(590, 220, 100, 23);
 
         airlinelbl.setText("Airlines");
         jPanel3.add(airlinelbl);
-        airlinelbl.setBounds(400, 100, 60, 13);
+        airlinelbl.setBounds(400, 100, 60, 14);
 
         airlineComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Buddha Airs", "Qatar Airways", "Turkish Airlines", "Nepal Airlines", "Himalaya Airlines" }));
         jPanel3.add(airlineComboBox);
-        airlineComboBox.setBounds(500, 100, 120, 19);
+        airlineComboBox.setBounds(500, 100, 120, 20);
 
         infoBtn.setText("Get Informaton");
         infoBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -511,7 +511,7 @@ public class AirTicket extends javax.swing.JFrame {
             }
         });
         jPanel3.add(infoBtn);
-        infoBtn.setBounds(500, 140, 120, 21);
+        infoBtn.setBounds(500, 140, 120, 23);
 
         priceTxtField.setEditable(false);
         priceTxtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -521,7 +521,7 @@ public class AirTicket extends javax.swing.JFrame {
 
         pricelbl.setText("Price");
         jPanel3.add(pricelbl);
-        pricelbl.setBounds(400, 260, 40, 13);
+        pricelbl.setBounds(400, 260, 40, 14);
 
         bookBtn.setText("Book");
         bookBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -530,7 +530,7 @@ public class AirTicket extends javax.swing.JFrame {
             }
         });
         jPanel3.add(bookBtn);
-        bookBtn.setBounds(540, 310, 70, 21);
+        bookBtn.setBounds(540, 310, 70, 23);
 
         bpNamedsplbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpNamedsplbl);
@@ -538,11 +538,11 @@ public class AirTicket extends javax.swing.JFrame {
 
         bpNamelbl.setText("Name");
         jPanel3.add(bpNamelbl);
-        bpNamelbl.setBounds(820, 90, 40, 13);
+        bpNamelbl.setBounds(820, 90, 40, 14);
 
         bpFromlbl.setText("From");
         jPanel3.add(bpFromlbl);
-        bpFromlbl.setBounds(820, 150, 40, 13);
+        bpFromlbl.setBounds(820, 150, 40, 14);
 
         bpFrmdpylbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpFrmdpylbl);
@@ -550,7 +550,7 @@ public class AirTicket extends javax.swing.JFrame {
 
         bpTolbl.setText("To");
         jPanel3.add(bpTolbl);
-        bpTolbl.setBounds(960, 150, 20, 13);
+        bpTolbl.setBounds(960, 150, 20, 14);
 
         bpTodsplbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpTodsplbl);
@@ -558,11 +558,11 @@ public class AirTicket extends javax.swing.JFrame {
 
         bpFlightdetaillbl.setText("Flight Detail");
         jPanel3.add(bpFlightdetaillbl);
-        bpFlightdetaillbl.setBounds(960, 210, 80, 13);
+        bpFlightdetaillbl.setBounds(960, 210, 80, 14);
 
         bpflightidlbl.setText("Flight Id");
         jPanel3.add(bpflightidlbl);
-        bpflightidlbl.setBounds(820, 210, 60, 13);
+        bpflightidlbl.setBounds(820, 210, 60, 14);
 
         bpFligtiddsplbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpFligtiddsplbl);
@@ -574,11 +574,11 @@ public class AirTicket extends javax.swing.JFrame {
 
         bpdepdatelbl.setText("Departure Date");
         jPanel3.add(bpdepdatelbl);
-        bpdepdatelbl.setBounds(960, 270, 90, 13);
+        bpdepdatelbl.setBounds(960, 270, 90, 14);
 
         bpClasslbl.setText("Class");
         jPanel3.add(bpClasslbl);
-        bpClasslbl.setBounds(820, 270, 40, 13);
+        bpClasslbl.setBounds(820, 270, 40, 14);
 
         bpClassdsplbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpClassdsplbl);
@@ -590,7 +590,7 @@ public class AirTicket extends javax.swing.JFrame {
 
         bpPricelbl.setText("Price");
         jPanel3.add(bpPricelbl);
-        bpPricelbl.setBounds(990, 330, 40, 13);
+        bpPricelbl.setBounds(990, 330, 40, 14);
 
         bpPricedsplbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpPricedsplbl);
@@ -611,7 +611,7 @@ public class AirTicket extends javax.swing.JFrame {
 
         bptimeseatlbl.setText("Time / Seat");
         jPanel3.add(bptimeseatlbl);
-        bptimeseatlbl.setBounds(820, 330, 70, 13);
+        bptimeseatlbl.setBounds(820, 330, 70, 14);
 
         bpAirlinelbl.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
         bpAirlinelbl.setForeground(new java.awt.Color(255, 255, 255));

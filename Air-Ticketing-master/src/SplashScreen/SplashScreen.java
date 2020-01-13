@@ -68,10 +68,6 @@ public class SplashScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         splashScreenPanel = new javax.swing.JPanel();
-        lblSplashAirTicketing = new javax.swing.JLabel();
-        lblSplashAirTicketing1 = new javax.swing.JLabel();
-        lblLoadingSplash = new javax.swing.JLabel();
-        splashExitBtn = new javax.swing.JButton();
         loginPanel = new javax.swing.JPanel();
         loginBtn = new javax.swing.JButton();
         passwordLbl = new javax.swing.JLabel();
@@ -80,52 +76,22 @@ public class SplashScreen extends javax.swing.JFrame {
         usernameLbl = new javax.swing.JLabel();
         splashLoginLbl = new javax.swing.JLabel();
         showPasswordCheckBox = new javax.swing.JCheckBox();
+        splashExitBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblSplashAirTicketing = new javax.swing.JLabel();
+        lblSplashAirTicketing1 = new javax.swing.JLabel();
+        lblLoadingSplash = new javax.swing.JLabel();
         progressBar = new javax.swing.JProgressBar();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        splashScreenPanel.setBackground(new java.awt.Color(33, 30, 36));
+        splashScreenPanel.setBackground(new java.awt.Color(255, 255, 255));
+        splashScreenPanel.setForeground(new java.awt.Color(255, 255, 255));
         splashScreenPanel.setLayout(null);
 
-        lblSplashAirTicketing.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        lblSplashAirTicketing.setForeground(new java.awt.Color(179, 222, 102));
-        lblSplashAirTicketing.setText("Welcome To ");
-        splashScreenPanel.add(lblSplashAirTicketing);
-        lblSplashAirTicketing.setBounds(270, 40, 160, 55);
-
-        lblSplashAirTicketing1.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
-        lblSplashAirTicketing1.setForeground(new java.awt.Color(179, 222, 102));
-        lblSplashAirTicketing1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSplashAirTicketing1.setText("UDYO Air Ticketing");
-        splashScreenPanel.add(lblSplashAirTicketing1);
-        lblSplashAirTicketing1.setBounds(230, 100, 221, 40);
-
-        lblLoadingSplash.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblLoadingSplash.setForeground(new java.awt.Color(179, 222, 102));
-        lblLoadingSplash.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblLoadingSplash.setText("0%");
-        splashScreenPanel.add(lblLoadingSplash);
-        lblLoadingSplash.setBounds(310, 150, 63, 27);
-        lblLoadingSplash.getAccessibleContext().setAccessibleName("");
-
-        splashExitBtn.setBackground(new java.awt.Color(33, 30, 36));
-        splashExitBtn.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        splashExitBtn.setForeground(new java.awt.Color(179, 222, 102));
-        splashExitBtn.setText("X");
-        splashExitBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(179, 222, 102), 2, true));
-        splashExitBtn.setBorderPainted(false);
-        splashExitBtn.setContentAreaFilled(false);
-        splashExitBtn.setFocusPainted(false);
-        splashExitBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                splashExitBtnActionPerformed(evt);
-            }
-        });
-        splashScreenPanel.add(splashExitBtn);
-        splashExitBtn.setBounds(630, 0, 50, 30);
-
-        loginPanel.setBackground(new java.awt.Color(47, 46, 48));
+        loginPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         loginBtn.setBackground(new java.awt.Color(179, 222, 102));
         loginBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
@@ -138,31 +104,27 @@ public class SplashScreen extends javax.swing.JFrame {
         });
 
         passwordLbl.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        passwordLbl.setForeground(new java.awt.Color(179, 222, 102));
+        passwordLbl.setForeground(new java.awt.Color(0, 204, 255));
         passwordLbl.setText("Password");
 
-        splashPasswordField.setBackground(new java.awt.Color(33, 30, 36));
-        splashPasswordField.setForeground(new java.awt.Color(179, 222, 102));
         splashPasswordField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(179, 222, 102), 2));
 
-        splashUsernameField.setBackground(new java.awt.Color(33, 30, 36));
-        splashUsernameField.setForeground(new java.awt.Color(179, 222, 102));
         splashUsernameField.setToolTipText("Type Username Here");
         splashUsernameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(179, 222, 102), 2));
 
         usernameLbl.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        usernameLbl.setForeground(new java.awt.Color(179, 222, 102));
+        usernameLbl.setForeground(new java.awt.Color(0, 204, 255));
         usernameLbl.setText("Username");
 
         splashLoginLbl.setBackground(new java.awt.Color(255, 255, 255));
         splashLoginLbl.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        splashLoginLbl.setForeground(new java.awt.Color(179, 222, 102));
+        splashLoginLbl.setForeground(new java.awt.Color(0, 204, 255));
         splashLoginLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         splashLoginLbl.setText("Login Form");
 
-        showPasswordCheckBox.setBackground(new java.awt.Color(51, 51, 51));
-        showPasswordCheckBox.setFont(new java.awt.Font("Trebuchet MS", 0, 10)); // NOI18N
-        showPasswordCheckBox.setForeground(new java.awt.Color(179, 222, 102));
+        showPasswordCheckBox.setBackground(new java.awt.Color(255, 255, 255));
+        showPasswordCheckBox.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        showPasswordCheckBox.setForeground(new java.awt.Color(0, 255, 255));
         showPasswordCheckBox.setText("Show Password");
         showPasswordCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,30 +139,30 @@ public class SplashScreen extends javax.swing.JFrame {
             .addGroup(loginPanelLayout.createSequentialGroup()
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(loginPanelLayout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(splashLoginLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(splashPasswordField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(loginPanelLayout.createSequentialGroup()
-                            .addGap(378, 378, 378)
-                            .addComponent(splashUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(loginPanelLayout.createSequentialGroup()
-                        .addGap(259, 259, 259)
+                        .addGap(26, 26, 26)
                         .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(splashPasswordField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(loginPanelLayout.createSequentialGroup()
+                                    .addGap(119, 119, 119)
+                                    .addComponent(splashUsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(showPasswordCheckBox)
                             .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(usernameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(passwordLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(212, Short.MAX_VALUE))
+                                .addComponent(passwordLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(313, 313, 313))
+                .addComponent(splashLoginLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78))
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addComponent(splashLoginLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -212,30 +174,78 @@ public class SplashScreen extends javax.swing.JFrame {
                     .addComponent(splashPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(showPasswordCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         splashScreenPanel.add(loginPanel);
-        loginPanel.setBounds(0, 240, 720, 200);
+        loginPanel.setBounds(20, 120, 310, 250);
+
+        splashExitBtn.setBackground(new java.awt.Color(33, 30, 36));
+        splashExitBtn.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        splashExitBtn.setForeground(new java.awt.Color(0, 204, 255));
+        splashExitBtn.setText("X");
+        splashExitBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(179, 222, 102), 2, true));
+        splashExitBtn.setBorderPainted(false);
+        splashExitBtn.setContentAreaFilled(false);
+        splashExitBtn.setFocusPainted(false);
+        splashExitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                splashExitBtnActionPerformed(evt);
+            }
+        });
+        splashScreenPanel.add(splashExitBtn);
+        splashExitBtn.setBounds(310, 0, 50, 30);
+
+        jPanel1.setLayout(null);
+
+        lblSplashAirTicketing.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        lblSplashAirTicketing.setForeground(new java.awt.Color(0, 204, 255));
+        lblSplashAirTicketing.setText("Welcome To ");
+        jPanel1.add(lblSplashAirTicketing);
+        lblSplashAirTicketing.setBounds(170, 50, 160, 40);
+
+        lblSplashAirTicketing1.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
+        lblSplashAirTicketing1.setForeground(new java.awt.Color(0, 204, 255));
+        lblSplashAirTicketing1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSplashAirTicketing1.setText("UDYO Air Ticketing");
+        jPanel1.add(lblSplashAirTicketing1);
+        lblSplashAirTicketing1.setBounds(320, 50, 221, 40);
+
+        lblLoadingSplash.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblLoadingSplash.setForeground(new java.awt.Color(0, 204, 255));
+        lblLoadingSplash.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblLoadingSplash.setText("0%");
+        jPanel1.add(lblLoadingSplash);
+        lblLoadingSplash.setBounds(290, 90, 63, 27);
+        lblLoadingSplash.getAccessibleContext().setAccessibleName("");
 
         progressBar.setForeground(new java.awt.Color(161, 199, 93));
-        splashScreenPanel.add(progressBar);
-        progressBar.setBounds(200, 190, 303, 33);
+        jPanel1.add(progressBar);
+        progressBar.setBounds(190, 120, 303, 33);
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Capture.PNG"))); // NOI18N
+        jPanel1.add(background);
+        background.setBounds(0, 0, 630, 440);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splashScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(splashScreenPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splashScreenPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
+            .addComponent(splashScreenPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(691, 442));
+        setSize(new java.awt.Dimension(1001, 443));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -293,6 +303,8 @@ public class SplashScreen extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel lblLoadingSplash;
     private javax.swing.JLabel lblSplashAirTicketing;
     private javax.swing.JLabel lblSplashAirTicketing1;
