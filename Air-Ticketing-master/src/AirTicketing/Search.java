@@ -15,11 +15,11 @@ public class Search {
         String flightDetail="";
         String flightClass="";
         String time="";
-        int contact;
-        int price;
+        String contact;
+        String price;
         Search(){}
 
-        Search(String name, int contact, String flightDetail, String fromTo, String departureDate, String airline, String flightClass, String Time, String flightId, int price){
+        Search(String name, String contact, String flightDetail, String fromTo, String departureDate, String airline, String flightClass, String Time, String flightId, String price){
         this.name = name;
         this.contact = contact;
         this.flightDetail = flightDetail;
@@ -35,32 +35,63 @@ public class Search {
     public String getName(){
         return name;
     }
-    public int getContact(){
-        return contact;
+    public void setName(String name) {
+        this.name = name;
+    }
+   
+    public String getContact(){
+        return contact;  
+    }
+    public void setContact(String contact) {
+        this.contact = contact;
     }
     public String getFlightDetail(){
         return flightDetail;
     }
+    public void setFlightDetail(String flightDetail) {
+        this.flightDetail = flightDetail;
+    }
     public String getFromTo(){
         return fromTo;
+    }
+    public void setFromTo(String fromTo) {
+        this.fromTo = fromTo;
     }
     public String getDepartureDate(){
         return departureDate;
     }
+    public void setDepartureDate(String departureDate) {
+        this.departureDate = departureDate;
+    }
     public String getAirline(){
         return airline;
+    }
+    public void setAirline(String airline) {
+        this.airline = airline;
     }
     public String getFlightClass(){
         return flightClass;
     }
+    public void setFlightClass(String flightClass) {
+        this.flightClass = flightClass;
+    }
     public String getTime(){
         return time;
+    }
+    public void setTime(String time) {
+        this.time = time;
     }
     public String getFlightId(){
         return flightId;
     }
-    public int getPrice(){
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
+    }
+    public String getPrice(){
         return price;
+    }
+    public void setPrice(String price) {
+        this.price = price;
     }
         
 }

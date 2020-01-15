@@ -29,6 +29,7 @@ public class AirTicket extends javax.swing.JFrame {
 
     //Declaring Variable to store userName obtained from SplashScreen.class
     String userName;
+    LinkedList<String> seatlist = new LinkedList<String>();
 
     /**
      * Creates new form AirTicket
@@ -159,6 +160,7 @@ public class AirTicket extends javax.swing.JFrame {
         bptimedsplbl = new javax.swing.JLabel();
         bptimeseatlbl = new javax.swing.JLabel();
         bpAirlinelbl = new javax.swing.JLabel();
+        clearbtn = new javax.swing.JButton();
         ticketlbl = new javax.swing.JLabel();
         adminJPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -438,7 +440,7 @@ public class AirTicket extends javax.swing.JFrame {
         jPanel3.add(depdatelbl);
         depdatelbl.setBounds(35, 260, 90, 20);
 
-        departureTxtField.setText(" / /");
+        departureTxtField.setText("DD/MM/YYYY");
         jPanel3.add(departureTxtField);
         departureTxtField.setBounds(135, 260, 190, 20);
 
@@ -465,6 +467,11 @@ public class AirTicket extends javax.swing.JFrame {
         seatTxtField.setBounds(135, 340, 180, 20);
 
         availableSeatBtn.setText("Check available seat");
+        availableSeatBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                availableSeatBtnActionPerformed(evt);
+            }
+        });
         jPanel3.add(availableSeatBtn);
         availableSeatBtn.setBounds(90, 380, 180, 23);
 
@@ -530,7 +537,7 @@ public class AirTicket extends javax.swing.JFrame {
             }
         });
         jPanel3.add(bookBtn);
-        bookBtn.setBounds(540, 310, 70, 23);
+        bookBtn.setBounds(500, 310, 70, 23);
 
         bpNamedsplbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel3.add(bpNamedsplbl);
@@ -617,6 +624,15 @@ public class AirTicket extends javax.swing.JFrame {
         bpAirlinelbl.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(bpAirlinelbl);
         bpAirlinelbl.setBounds(890, 10, 200, 30);
+
+        clearbtn.setText("Clear");
+        clearbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearbtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(clearbtn);
+        clearbtn.setBounds(590, 310, 70, 23);
 
         ticketlbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/airticket.jpg"))); // NOI18N
         ticketlbl.setLabelFor(ticketlbl);
@@ -1086,6 +1102,8 @@ public class AirTicket extends javax.swing.JFrame {
                     String data[] = {name, contact, flightDetail, fromTo, departureDate, airline, flightClass, time, flightId, Integer.toString(total)};
                     //Getting the table's total number of columns and rows  
                     DefaultTableModel model = (DefaultTableModel) mainTbl.getModel();
+                    DefaultTableModel adminmodel = (DefaultTableModel) adminTable.getModel();
+                    adminmodel.addRow(data);
                     model.addRow(new Object[1]);
                     boolean empty = false;
                     int nextRow = 0;
@@ -1102,6 +1120,8 @@ public class AirTicket extends javax.swing.JFrame {
                     for (int i = 0; i < colCount; i++) {
                         mainTbl.setValueAt(data[i], nextRow, i);
                     }
+
+                    
                     /**
                      *
                      *
@@ -1119,6 +1139,7 @@ public class AirTicket extends javax.swing.JFrame {
                      *
                      */
                     String seat = seatTxtField.getText();
+                    seatlist.add(seat);
 
                     bpNamelbl.setVisible(true);
                     bpNamedsplbl.setText(name);
@@ -1279,7 +1300,12 @@ public class AirTicket extends javax.swing.JFrame {
 
     private void helpMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMenuMouseClicked
         // TODO add your handling code here:
-        
+        try {
+            File myFile = new File("src/resources/HelpPDF.pdf");
+            Desktop.getDesktop().open(myFile);
+        } catch (Exception exp) {
+            exp.printStackTrace();
+        }
 
     }//GEN-LAST:event_helpMenuMouseClicked
 
@@ -1388,19 +1414,47 @@ public class AirTicket extends javax.swing.JFrame {
                     String data[] = {name, contact, flightdetail, fromTo, departuredate, Airline, Class, time, Flightid, price};
                     DefaultTableModel model = (DefaultTableModel) searchtbl.getModel();
                     model.addRow(data);
+                    Search datas = createItem(data);
+                    //adding data in dataList
+                    dataList.add(datas);
                 } 
-                for (Search m : dataList) {
-                    JOptionPane.showMessageDialog(rootPane, "Your data has found for Airline: " + m.getAirline() + ", Name:" + m.getName());
-                }
+                    
+                 
+                
             }
-            JOptionPane.showMessageDialog(rootPane,counter + " are data found for " + toSearch +" which are" + namecount) ;
+            for (Search m : dataList) {
+                    JOptionPane.showMessageDialog(rootPane, counter +" data has found for Airline: " + m.getAirline() +"\n"+" which are" + namecount);
+                    break;
+                }
+          
 
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(rootPane, "Not Found", "Information", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_searchcbActionPerformed
+   /**
+     * 
+     * 
+     * Method to store item in search 
+     *
+     */
+    private static Search createItem(String metadata []) {
+           String name = metadata[0];
+           String contact = metadata[1];
+           String flightdetail = metadata[2];
+           String fromTo = metadata[3];
+           String departuredate = metadata[4];
+           String Airline = metadata[5];
+           String Class = metadata[6];
+           String time = metadata[7];
+           String Flightid = metadata[8];
+           String  price = metadata[9];
 
+            // create and return item of this metadata
+            return new Search(name, contact, flightdetail, fromTo, departuredate, Airline, Class, time, Flightid, price);
+        }
+    
     /**
      * 
      * 
@@ -1437,6 +1491,73 @@ public class AirTicket extends javax.swing.JFrame {
             model.removeRow(0);   
         }  
     }//GEN-LAST:event_clearBtn1ActionPerformed
+
+    private void clearbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbtnActionPerformed
+        // TODO add your handling code here:
+        nameTxtField.setText("");
+        ageTxtField.setText("");
+        phonePinTxtField.setText("");
+        phoneTxtField.setText("");
+        departureTxtField.setText("DD/MM/YYYY");
+        seatTxtField.setText("");
+        priceTxtField.setText("Price will be displayed here.");
+        genderBtnGroup.clearSelection();
+        tripBtnGroup.clearSelection();
+        classBtnGroup.clearSelection();
+        airlineComboBox.setSelectedIndex(0);
+        fromComboBox.setSelectedIndex(0);
+        toComboBox.setSelectedIndex(0);
+        //boarding pass
+        bpNamelbl.setVisible(false);
+        bpFromlbl.setVisible(false);
+        bpTolbl.setVisible(false);
+        bpflightidlbl.setVisible(false);
+        bpFlightdetaillbl.setVisible(false);
+        bpAirlinelbl.setVisible(false);
+        bpClasslbl.setVisible(false);
+        bpdepdatelbl.setVisible(false);
+        bptimeseatlbl.setVisible(false);
+        bpseprator.setVisible(false);
+        bpPricelbl.setVisible(false);
+        bpNamedsplbl.setText("");
+        bpAirlinelbl.setText("");
+        bpFrmdpylbl.setText("");
+        bpTodsplbl.setText("");
+        bpFligtiddsplbl.setText("");
+        bpFlightdetaildsplbl.setText("");
+        bpClassdsplbl.setText("");
+        bpdepdatedsplbl.setText("");
+        bptimedsplbl.setText("");
+        bpSeatdsplbl.setText("");
+        bpPricedsplbl.setText("");
+        // table
+        int rowCount = mainTbl.getRowCount();
+        int colCount = mainTbl.getColumnCount();
+        for(int j=0; j<rowCount;j++) {
+               for(int i=0; i<colCount;i++) {
+                    mainTbl.setValueAt(null, j, i);   
+            }                    
+        }
+        for(int i=0;i<rowCount;i++){
+            DefaultTableModel model=(DefaultTableModel)mainTbl.getModel();                    
+            model.removeRow(0);   
+        } 
+                
+    }//GEN-LAST:event_clearbtnActionPerformed
+
+    private void availableSeatBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_availableSeatBtnActionPerformed
+        // TODO add your handling code here:
+        String Check = seatTxtField.getText();
+        
+        for(String s : seatlist){
+        if(s.contains(Check)){
+            JOptionPane.showMessageDialog(rootPane, "Sorry seat is already booked", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }else {
+            JOptionPane.showMessageDialog(rootPane, "You can book the Seat", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        }
+    }//GEN-LAST:event_availableSeatBtnActionPerformed
 
     /**
      *
@@ -1519,6 +1640,7 @@ public class AirTicket extends javax.swing.JFrame {
     private javax.swing.ButtonGroup classBtnGroup;
     private javax.swing.JLabel classlbl;
     private javax.swing.JButton clearBtn1;
+    private javax.swing.JButton clearbtn;
     private javax.swing.JLabel contactlbl;
     private java.awt.Label currentTimeLbl;
     private javax.swing.JTextField departureTxtField;

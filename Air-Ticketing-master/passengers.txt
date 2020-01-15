@@ -1,0 +1,15 @@
+Satkar Silwal,+9774576899067,One Way,Nepal-India,23/12/2020,Buddha Airs,Economy,10:00 A.M,NI23BA,1500
+Shyam Acharya,+9779841455667,One Way,India-China,20/02/2020,Buddha Airs,Economy,10:00 A.M,IC20BA,1800
+Uzumaki Naruto,+8667865473526,One Way,Nepal-India,29/04/2020,Buddha Airs,Economy,10:00 A.M,NI29BA,1500
+Swastika Parajuli,+9779860785746,Whole Trip,Nepal-Spain,19/01/2020,Nepal Airlines,First Class ,05:30 P.M,NS19NA,2600
+James Evans,+8446789236754,Whole Trip,Australia-Spain,11/08/2020,Qatar Airways,First Class ,12:30 P.M,SA11QA,2900
+Robert Hemswort,+8445645235678,One Way,China-Australia,01/01/2020,Turkish Airlines,First Class ,03:00 P.M,CA01TA,2100
+Elizabeth Scarlet,+6554576452378,Whole Trip,India-Australia,12/12/2020,Qatar Airways,Economy,12:30 P.M,IA12QA,2000
+Roshika Khatri,+9779849785643,Whole Trip,Nepal-Spain,10/11/2020,Himalaya Airlines,First Class ,08:30 P.M,NS10HA,2800
+Roshan Paudel,+9779849567898,Whole Trip,Nepal-Australia,05/17/2020,Himalaya Airlines,First Class ,08:30 P.M,NA05HA,2400
+Ranvir Kapoor,+8668965456786,Whole Trip,India-Nepal,15/10/2020,Nepal Airlines,First Class ,05:30 P.M,NI15NA,2300
+Alisha Khan,+8664356786543,Whole Trip,India-Nepal,25/04/2020,Buddha Airs,First Class ,10:00 A.M,NI25BA,2300
+Arya Stark,+4552364753465,One Way,Spain-Australia,21/02/2020,Himalaya Airlines,Economy,08:30 P.M,SA21HA,2200
+Jon Snow,+4552354876312,One Way,Spain-Nepal,17/07/2020,Himalaya Airlines,First Class ,08:30 P.M,NS17HA,2400
+Lionel Messi,+4332345768923,Whole Trip,Spain-Nepal,19/09/2020,Turkish Airlines,First Class ,03:00 P.M,NS19TA,2800
+
